@@ -127,10 +127,10 @@ def main():
         elif opcion == '2':
             agregar_producto_alimenticio(inventario)
         elif opcion == '3':
-            nombre = input("Nombre del producto a eliminar: ")
+            nombre = input("Nombre del producto que deseas eliminar: ")
             inventario.eliminar_producto(nombre)
         elif opcion == '4':
-            nombre = input("Nombre del producto a actualizar: ")
+            nombre = input("Nombre del producto que deseas actualizar: ")
             campo = input("Campo a actualizar (nombre, precio, cantidad, etc.): ")
             valor = input("Nuevo valor: ")
             inventario.actualizar_producto(nombre, **{campo: valor})
