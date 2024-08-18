@@ -76,6 +76,7 @@ class GestorVentas:
             print("Error al decodificar el archivo JSON.")
 
 def mostrar_menu():
+    print("###################SISTEMA DE GESTIÓN DE VENTAS#############################")
     print("\nMenú de opciones:")
     print("1. Agregar Venta Online")
     print("2. Agregar Venta Local")
@@ -87,15 +88,15 @@ def mostrar_menu():
     print("8. Salir")
 
 def obtener_venta_online():
-    cliente = input("Ingrese el nombre del cliente: ")
-    productos = input("Ingrese los productos vendidos separados por comas: ").split(',')
-    plataforma = input("Ingrese la plataforma de venta: ")
+    cliente = input("Ingresá el nombre del cliente: ")
+    productos = input("Ingresá los productos vendidos separados por comas: ").split(',')
+    plataforma = input("Ingresá la plataforma de venta: ")
     return VentaOnline(datetime.now(), cliente, productos, plataforma)
 
 def obtener_venta_local():
-    cliente = input("Ingrese el nombre del cliente: ")
-    productos = input("Ingrese los productos vendidos separados por comas: ").split(',')
-    sucursal = input("Ingrese la sucursal de venta: ")
+    cliente = input("Ingresá el nombre del cliente: ")
+    productos = input("Ingresá los productos vendidos separados por comas: ").split(',')
+    sucursal = input("Ingresa la sucursal de venta: ")
     return VentaLocal(datetime.now(), cliente, productos, sucursal)
 
 def main():
@@ -103,7 +104,7 @@ def main():
 
     while True:
         mostrar_menu()
-        opcion = input("Seleccione una opción: ")
+        opcion = input("Seleccioná una opción: ")
 
         if opcion == "1":
             venta = obtener_venta_online()
@@ -121,34 +122,34 @@ def main():
             else:
                 print("No hay ventas registradas.")
         elif opcion == "4":
-            index = int(input("Ingrese el índice de la venta a modificar: "))
+            index = int(input("Ingresá el índice de la venta a modificar: "))
             tipo_venta = input("¿Es una venta online o local? (online/local): ").lower()
             if tipo_venta == "online":
                 nueva_venta = obtener_venta_online()
             elif tipo_venta == "local":
                 nueva_venta = obtener_venta_local()
             else:
-                print("Tipo de venta no válido.")
+                print("Tipo de venta no válida.")
                 continue
             gestor.modificar_venta(index, nueva_venta)
             print("Venta modificada exitosamente.")
         elif opcion == "5":
-            index = int(input("Ingrese el índice de la venta a eliminar: "))
+            index = int(input("Ingresá el índice de la venta a eliminar: "))
             gestor.eliminar_venta(index)
             print("Venta eliminada exitosamente.")
         elif opcion == "6":
-            archivo = input("Ingrese el nombre del archivo JSON: ")
+            archivo = input("Ingresá el nombre del archivo JSON: ")
             gestor.guardar_en_json(archivo)
             print(f"Ventas guardadas en {archivo} exitosamente.")
         elif opcion == "7":
-            archivo = input("Ingrese el nombre del archivo JSON: ")
+            archivo = input("Ingresá el nombre del archivo JSON: ")
             gestor.cargar_de_json(archivo)
             print(f"Ventas cargadas desde {archivo} exitosamente.")
         elif opcion == "8":
-            print("Saliendo del programa.")
+            print("Saliendo del programa...")
             break
         else:
-            print("Opción no válida, por favor intente nuevamente.")
+            print("Opción no válida, por favor intentá nuvamente.")
 
 if __name__ == "__main__":
     main()
