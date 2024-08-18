@@ -1,0 +1,19 @@
+[
+    {
+        "fecha": "2024-08-18 00:20:38",
+        "cliente": "mouse \u00f3ptico",
+        "productos": [
+            "mouse \u00f3ptico"
+        ],
+        "plataforma": "amazon"
+    },
+    {
+        "fecha": "2024-08-18 00:21:27",
+        "cliente": "Leandro",
+        "productos": [
+            "mouse \u00f3ptico",
+            " teclado gamer"
+        ],
+        "plataforma": "amazon"
+    }
+]

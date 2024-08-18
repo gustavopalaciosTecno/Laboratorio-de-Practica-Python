@@ -1,0 +1,19 @@
+[
+    {
+        "fecha": "2024-08-18 00:17:35",
+        "cliente": "Leandro",
+        "productos": [
+            "Producto1",
+            "Producto2"
+        ],
+        "plataforma": "Amazon"
+    },
+    {
+        "fecha": "2024-08-18 00:17:35",
+        "cliente": "Cliente2",
+        "productos": [
+            "Producto3"
+        ],
+        "sucursal": "Sucursal1"
+    }
+]
